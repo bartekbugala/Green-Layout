@@ -316,68 +316,59 @@ section.staff > div {
   padding-top: 40px;
   padding-bottom: 40px;
   z-index: 200; }
-
-.counters div div {
-  text-align: center;
-  margin: 0 auto;
-  padding: 0 10px; }
-
-.counters h1 {
-  display: block;
-  font-size: 50px;
-  font-weight: 900;
-  line-height: 1.2;
-  margin: 0 10px;
-  color: #313332;
-  margin-bottom: 0; }
-
-.counters h3 {
-  display: block;
-  padding: 0;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #53B863;
-  word-wrap: break-word; }
+  .counters h1 {
+    display: block;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 0 10px;
+    color: #313332;
+    margin-bottom: 0; }
+  .counters h3 {
+    display: block;
+    padding: 0;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #53B863;
+    word-wrap: break-word; }
+  .counters div div {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 10px; }
 
 footer {
   background-color: #313332;
   color: #fff; }
-
-footer > div:first-child {
-  text-align: center;
-  padding-bottom: 20px; }
-
-footer .line2:after {
-  content: "";
-  display: inline-block;
-  width: 8vw;
-  height: 6px;
-  margin-left: 10px;
-  border-top: 1px solid #fff; }
-
-.social-icons {
-  display: block;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center; }
-
-.social-icons .col {
-  padding-left: 4px; }
-
-.social-icons i {
-  font-size: 20px;
-  display: inline-block;
-  background-color: #53B863;
-  padding: 4px;
-  margin-left: 8px;
-  margin-bottom: 8px; }
-
-footer > div:last-child {
-  text-align: center;
-  color: #ccc;
-  background-color: #000;
-  min-height: 50px;
-  line-height: 50px; }
+  footer > div:first-child {
+    text-align: center;
+    padding-bottom: 20px; }
+  footer > div:last-child {
+    text-align: center;
+    color: #ccc;
+    background-color: #000;
+    min-height: 50px;
+    line-height: 50px; }
+  footer > div .line2:after {
+    content: "";
+    display: inline-block;
+    width: 8vw;
+    height: 6px;
+    margin-left: 10px;
+    border-top: 1px solid #fff; }
+  footer > div .social-icons {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center; }
+    footer > div .social-icons .col {
+      padding-left: 4px; }
+    footer > div .social-icons i {
+      font-size: 20px;
+      display: inline-block;
+      background-color: #53B863;
+      padding: 4px;
+      margin-left: 8px;
+      margin-bottom: 8px; }
 
 @media (max-width: 767px) {
   .col-s-1 {
