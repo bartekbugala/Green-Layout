@@ -1,11 +1,3 @@
-/* white;*/
-/* #04c8e9;*/
-/* #313332;*/
-/* #aaa; */
-/* rgba(107, 107, 107, .5) */
-/* rgba(0, 0, 0, .5); */
-/* #ccc */
-/*test*/
 * {
   box-sizing: border-box; }
 
@@ -73,44 +65,40 @@ h3 {
 
 header {
   background-color: #313332; }
+  header nav {
+    min-height: 50px; }
+    header nav ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      float: right;
+      margin-right: 15%; }
+      header nav ul li {
+        float: left; }
+        header nav ul li a {
+          display: block;
+          font-size: 1em;
+          font-weight: 600;
+          line-height: 50px;
+          padding: 0 12px;
+          text-decoration: none;
+          color: #fff;
+          text-transform: uppercase;
+          transition: background-color 0.3s linear, color 0.3s linear; }
+    header nav .logo {
+      float: left;
+      width: 150px;
+      margin-left: 10%;
+      padding-top: 15px; }
 
-nav {
-  min-height: 50px; }
-
-nav .logo {
-  float: left;
-  width: 150px;
-  margin-left: 10%;
-  padding-top: 15px; }
-
-header > nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  float: right;
-  margin-right: 15%; }
-
-header > nav ul > li {
-  float: left; }
-
-header > nav ul > li > a {
-  display: block;
-  font-size: 1em;
-  font-weight: 600;
-  line-height: 50px;
-  padding: 0 12px;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  transition: background-color 0.3s linear, color 0.3s linear; }
-
+/*header>nav ul>li>*/
 .blue,
 header > nav ul > li > a:active {
-  color: #04c8e9; }
+  color: #53B863; }
 
 header > nav ul > li:hover {
-  background-color: #6b6b6b;
-  color: #04c8e9; }
+  background-color: #53B863;
+  color: #53B863; }
 
 header > nav img {
   padding: 10px 0; }
@@ -123,7 +111,7 @@ header > nav img {
   background-size: cover; }
 
 .hero > div {
-  background-color: rgba(107, 107, 107, 0.5);
+  background-color: #53B86380;
   float: right;
   max-width: 900px;
   padding: 10px 24% 10px 10px;
@@ -162,7 +150,7 @@ header > nav img {
   transition: background-color 0.3s linear; }
 
 .benefits i:hover {
-  background-color: #04c8e9;
+  background-color: #53B863;
   cursor: pointer; }
 
 .benefits h3 {
@@ -177,7 +165,7 @@ header > nav img {
 
 .benefits i:hover + h3,
 h3.blue-benefit {
-  color: #04c8e9;
+  color: #53B863;
   cursor: pointer; }
 
 .benefits p {
@@ -280,7 +268,7 @@ section.staff > div {
   text-align: center; }
 
 .staff h4 {
-  color: #6b6b6b; }
+  color: #53B863; }
 
 .portrait {
   margin: 0 auto;
@@ -324,7 +312,7 @@ div.job {
   padding: 20px 10px 0 10px;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(#313332, #04c8e9); }
+  background-image: linear-gradient(#313332, #53B863); }
 
 .tablet-picture > div {
   width: 70%;
@@ -383,7 +371,7 @@ div.job {
   padding: 0;
   line-height: 1;
   text-transform: uppercase;
-  color: #04c8e9;
+  color: #53B863;
   word-wrap: break-word; }
 
 footer {
@@ -414,7 +402,7 @@ footer .line2:after {
 .social-icons i {
   font-size: 20px;
   display: inline-block;
-  background-color: #04c8e9;
+  background-color: #53B863;
   padding: 4px;
   margin-left: 8px;
   margin-bottom: 8px; }
@@ -470,7 +458,7 @@ footer > div:last-child {
     text-align: justify;
     padding: 0 8vw; }
 
-  nav .logo {
+  header nav .logo {
     float: none;
     display: block;
     background: none;
@@ -480,25 +468,22 @@ footer > div:last-child {
     height: auto;
     padding: 10px;
     margin: 0 auto; }
-
-  header > nav ul > li {
+  header nav ul {
     float: none;
     display: block;
     background: none;
     width: 100%;
     text-align: center; }
-
-  header > nav ul {
-    float: none;
-    display: block;
-    background: none;
-    width: 100%;
-    text-align: center; }
-
-  header nav ul li a {
-    font-size: 30px;
-    font-weight: 500;
-    padding: 10px 0; }
+    header nav ul li {
+      float: none;
+      display: block;
+      background: none;
+      width: 100%;
+      text-align: center; }
+      header nav ul li a {
+        font-size: 30px;
+        font-weight: 500;
+        padding: 10px 0; }
 
   .hero > div {
     float: none;
@@ -507,17 +492,15 @@ footer > div:last-child {
   .benefits {
     margin-top: 0;
     padding: 0; }
-
-  .benefits > div {
-    width: 100%; }
-
-  .benefits i {
-    margin-top: 10px;
-    line-height: 120px;
-    width: 120px;
-    height: 120px;
-    vertical-align: middle;
-    font-size: 80px; }
+    .benefits > div {
+      width: 100%; }
+    .benefits i {
+      margin-top: 10px;
+      line-height: 120px;
+      width: 120px;
+      height: 120px;
+      vertical-align: middle;
+      font-size: 80px; }
 
   .benefits h3,
   .header-text h1 {
@@ -685,15 +668,14 @@ footer > div:last-child {
     height: 100%;
     cursor: pointer;
     background: none; }
+    .gallery-tile .layer i {
+      z-index: 100;
+      padding: 10px;
+      border-radius: 5px;
+      transition: unset; }
 
-  .gallery-tile .layer i {
-    z-index: 100;
-    padding: 10px;
-    border-radius: 5px;
-    transition: unset; }
-
-  .portrait div.job,
-  .portrait:hover div.job {
+  .portrait .job,
+  .portrait:hover .job {
     background: none;
     cursor: unset;
     transition: unset;
@@ -727,22 +709,16 @@ footer > div:last-child {
 
   footer > div {
     width: 100%;
-    margin: 0; }
-
+    margin: 0;
+    padding: 0 8vw; }
+    footer > div > .col > p {
+      padding: 0 8px; }
   footer .line2:after {
     display: none; }
-
-  footer > div > .col > p {
-    padding: 0 8px; }
-
   footer p {
     text-align: left; }
-
-  footer p:first-of-type {
-    text-align: justify; }
-
-  footer > div {
-    padding: 0 8vw; } }
+    footer p:first-of-type {
+      text-align: justify; } }
 @media (max-width: 349px) {
   *,
   p,
@@ -860,26 +836,22 @@ footer > div:last-child {
     width: 100%;
     margin: 0;
     padding: 0; }
-
-  .tablet-picture h1 {
-    margin: 0;
-    padding: 0 8vw;
-    font-size: 20px;
-    text-align: center; }
-
-  .tablet-picture p {
-    padding: 0 8vw;
-    text-align: justify; }
-
-  .tablet-picture > div {
-    padding: 0;
-    width: 90%; }
-
-  .tablet-picture img {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    margin-bottom: 0; }
+    .tablet-picture h1 {
+      margin: 0;
+      padding: 0 8vw;
+      font-size: 20px;
+      text-align: center; }
+    .tablet-picture p {
+      padding: 0 8vw;
+      text-align: justify; }
+    .tablet-picture > div {
+      padding: 0;
+      width: 90%; }
+    .tablet-picture img {
+      width: 100%;
+      max-width: 100%;
+      padding: 10px;
+      margin-bottom: 0; }
 
   .counters h1 {
     display: block;
