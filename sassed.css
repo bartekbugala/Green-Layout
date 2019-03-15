@@ -123,7 +123,7 @@ header {
 
 .benefits {
   min-height: 330px; }
-  .benefits div {
+  .benefits > div {
     padding-top: 50px;
     width: 80%;
     margin: 0 auto; }
@@ -142,7 +142,8 @@ header {
     .benefits i:hover {
       background-color: #53B863;
       cursor: pointer; }
-    .benefits i:hover + h3 {
+    .benefits i:hover + h3,
+    .benefits i h3.blue-benefit {
       color: #53B863;
       cursor: pointer; }
   .benefits h3 {
@@ -166,25 +167,22 @@ header {
 .header-text {
   background-color: #fff;
   padding-bottom: 10px; }
-
-.header-text > div {
-  width: 50%;
-  text-align: center;
-  margin: 0 auto; }
-
-.header-text h1 {
-  color: #313332;
-  font-size: 28px;
-  margin-top: 0;
-  word-wrap: break-word; }
-
-.header-text p {
-  line-height: 16px;
-  font-size: 14px;
-  margin-top: 0;
-  text-align: center;
-  color: #aaa;
-  word-wrap: break-word; }
+  .header-text > div {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto; }
+  .header-text h1 {
+    color: #313332;
+    font-size: 28px;
+    margin-top: 0;
+    word-wrap: break-word; }
+  .header-text p {
+    line-height: 16px;
+    font-size: 14px;
+    margin-top: 0;
+    text-align: center;
+    color: #aaa;
+    word-wrap: break-word; }
 
 .gallery .col {
   display: block;
@@ -285,35 +283,30 @@ section.staff > div {
   background-position: center;
   background-size: cover;
   background-image: linear-gradient(#313332, #53B863); }
-
-.tablet-picture > div {
-  width: 70%;
-  max-width: 1200px;
-  padding: 20px 20px;
-  color: #fff;
-  margin: 0 auto;
-  vertical-align: bottom; }
-
-.tablet-picture > div > div {
-  display: block;
-  vertical-align: bottom;
-  overflow: visible;
-  z-index: 2; }
-
-.tablet-picture img {
-  display: block;
-  position: relative;
-  padding: 10px 10px 0 10px;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  margin-bottom: -220px; }
-
-.tablet-picture h1 {
-  padding: 10px; }
-
-.tablet-picture p {
-  padding: 0 10px; }
+  .tablet-picture img {
+    display: block;
+    position: relative;
+    padding: 10px 10px 0 10px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: -220px; }
+  .tablet-picture h1 {
+    padding: 10px; }
+  .tablet-picture p {
+    padding: 0 10px; }
+  .tablet-picture > div {
+    width: 70%;
+    max-width: 1200px;
+    padding: 20px 20px;
+    color: #fff;
+    margin: 0 auto;
+    vertical-align: bottom; }
+    .tablet-picture > div > div {
+      display: block;
+      vertical-align: bottom;
+      overflow: visible;
+      z-index: 2; }
 
 .counters {
   position: relative;
