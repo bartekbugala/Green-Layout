@@ -67,6 +67,8 @@ header {
   background-color: #313332; }
   header nav {
     min-height: 50px; }
+    header nav img {
+      padding: 10px 0; }
     header nav ul {
       margin: 0;
       padding: 0;
@@ -75,6 +77,9 @@ header {
       margin-right: 15%; }
       header nav ul li {
         float: left; }
+        header nav ul li:hover {
+          background-color: #53B863;
+          color: #53B863; }
         header nav ul li a {
           display: block;
           font-size: 1em;
@@ -84,23 +89,14 @@ header {
           text-decoration: none;
           color: #fff;
           text-transform: uppercase;
-          transition: background-color 0.3s linear, color 0.3s linear; }
+          transition: background-color .3s linear, color .3s linear; }
+          header nav ul li a:active {
+            color: #53B863; }
     header nav .logo {
       float: left;
       width: 150px;
       margin-left: 10%;
       padding-top: 15px; }
-
-.blue,
-header > nav ul > li > a:active {
-  color: #53B863; }
-
-header > nav ul > li:hover {
-  background-color: #53B863;
-  color: #53B863; }
-
-header > nav img {
-  padding: 10px 0; }
 
 .hero {
   height: 380px;
@@ -108,73 +104,64 @@ header > nav img {
   background-position-y: 55%;
   background-repeat: no-repeat;
   background-size: cover; }
-
-.hero > div {
-  background-color: #53B86380;
-  float: right;
-  max-width: 900px;
-  padding: 10px 24% 10px 10px;
-  position: relative;
-  top: 25%;
-  bottom: 25%;
-  height: 150px; }
-
-.hero > div h1 {
-  font-weight: 400;
-  color: #fff;
-  text-align: left; }
+  .hero div {
+    background-color: #53B86380;
+    float: right;
+    max-width: 900px;
+    padding: 10px 24% 10px 10px;
+    position: relative;
+    top: 25%;
+    bottom: 25%;
+    height: 150px; }
+    .hero div h1 {
+      font-weight: 400;
+      color: #fff;
+      text-align: left; }
 
 .bold {
   font-weight: 900; }
 
 .benefits {
   min-height: 330px; }
-
-.benefits > div {
-  padding-top: 50px;
-  width: 80%;
-  margin: 0 auto; }
-
-.benefits i {
-  display: block;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 50px;
-  color: #fff;
-  background-color: #313332;
-  border-radius: 10px;
-  transition: background-color 0.3s linear; }
-
-.benefits i:hover {
-  background-color: #53B863;
-  cursor: pointer; }
-
-.benefits h3 {
-  font-weight: 700;
-  margin-top: 25px;
-  margin-bottom: 4px;
-  font-size: 16px;
-  text-align: center;
-  padding: 0 15%;
-  color: #313332;
-  word-wrap: break-word; }
-
-.benefits i:hover + h3,
-h3.blue-benefit {
-  color: #53B863;
-  cursor: pointer; }
-
-.benefits p {
-  line-height: 15px;
-  font-size: 14px;
-  margin-top: 0;
-  text-align: center;
-  padding: 0 15%;
-  color: #aaa;
-  word-wrap: break-word; }
+  .benefits div {
+    padding-top: 50px;
+    width: 80%;
+    margin: 0 auto; }
+  .benefits i {
+    display: block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 50px;
+    color: #fff;
+    background-color: #313332;
+    border-radius: 10px;
+    transition: background-color .3s linear; }
+    .benefits i:hover {
+      background-color: #53B863;
+      cursor: pointer; }
+    .benefits i:hover + h3 {
+      color: #53B863;
+      cursor: pointer; }
+  .benefits h3 {
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15%;
+    color: #313332;
+    word-wrap: break-word; }
+  .benefits p {
+    line-height: 15px;
+    font-size: 14px;
+    margin-top: 0;
+    text-align: center;
+    padding: 0 15%;
+    color: #aaa;
+    word-wrap: break-word; }
 
 .header-text {
   background-color: #fff;
@@ -202,58 +189,50 @@ h3.blue-benefit {
 .gallery .col {
   display: block;
   line-height: 0; }
-
+  .gallery .col .gallery-tile {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 0; }
+    .gallery .col .gallery-tile .layer {
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 1;
+      width: 100%;
+      height: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: height .3s linear; }
+      .gallery .col .gallery-tile .layer i {
+        position: absolute;
+        background-color: #ccc;
+        padding: .5vw;
+        border-radius: .2vw;
+        border: solid #ccc 0.2vw;
+        color: #000;
+        top: 40%;
+        overflow: hidden;
+        transition: z-index .6s linear;
+        z-index: -100; }
+      .gallery .col .gallery-tile .layer .fa-camera-retro {
+        left: 20%; }
+      .gallery .col .gallery-tile .layer .fa-search {
+        right: 20%; }
+    .gallery .col .gallery-tile:hover .layer {
+      height: 100%;
+      cursor: pointer; }
+      .gallery .col .gallery-tile:hover .layer i {
+        z-index: 100;
+        transition: z-index 0.1s linear; }
 .gallery img {
   display: block;
   width: 100%;
   max-width: 100%;
   object-fit: cover;
   padding: 0; }
-
-.gallery .col .gallery-tile {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 0; }
-
-.gallery-tile .layer {
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  width: 100%;
-  height: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: height 0.3s linear; }
-
-.gallery-tile:hover .layer {
-  height: 100%;
-  cursor: pointer; }
-
-.gallery-tile .layer i {
-  position: absolute;
-  background-color: #ccc;
-  padding: .5vw;
-  border-radius: .2vw;
-  border: solid #ccc 0.2vw;
-  color: #000;
-  top: 40%;
-  overflow: hidden;
-  transition: z-index .6s linear;
-  z-index: -100; }
-
-.gallery-tile:hover .layer i {
-  z-index: 100;
-  transition: z-index 0.1s linear; }
-
-.fa-camera-retro {
-  left: 20%; }
-
-.fa-search {
-  right: 20%; }
 
 .staff img {
   width: 100%;
@@ -274,37 +253,31 @@ section.staff > div {
   text-align: center;
   position: relative;
   display: inline-block; }
-
-.portrait div.job {
-  opacity: 0;
-  transition: opacity 1s linear; }
-
-.portrait:hover div.job {
-  background-color: #aaa;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  width: 100%;
-  height: 98%;
-  border-radius: 50%;
-  position: absolute;
-  top: 49%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer; }
-
-.job h4 {
-  z-index: 85;
-  position: absolute;
-  text-align: center;
-  top: 25%;
-  left: 25%;
-  color: #ccc;
-  font-size: 100%; }
-
-div.job {
-  background-color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0; }
+  .portrait .job {
+    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 1s linear; }
+    .portrait .job h4 {
+      z-index: 85;
+      position: absolute;
+      text-align: center;
+      top: 25%;
+      left: 25%;
+      color: #ccc;
+      font-size: 100%; }
+  .portrait:hover .job {
+    background-color: #aaa;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    width: 100%;
+    height: 98%;
+    border-radius: 50%;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer; }
 
 .tablet-picture {
   width: 100%;
@@ -528,25 +501,22 @@ footer > div:last-child {
   .gallery .col {
     display: block;
     line-height: 1; }
-
-  .gallery .col .gallery-tile {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin: 0 auto; }
-
-  .gallery-tile .layer {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background: none; }
-
-  .gallery-tile .layer i {
-    z-index: 100;
-    padding: 10px;
-    border-radius: 5px;
-    transition: unset; }
+    .gallery .col .gallery-tile {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0 auto; }
+      .gallery .col .gallery-tile .layer {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background: none; }
+        .gallery .col .gallery-tile .layer i {
+          z-index: 100;
+          padding: 10px;
+          border-radius: 5px;
+          transition: unset; }
 
   .portrait div.job,
   .portrait:hover div.job {
@@ -663,12 +633,12 @@ footer > div:last-child {
       text-transform: uppercase;
       transition: background-color 0.3s linear, color 0.3s linear; }
 
-  .gallery-tile .layer {
+  .gallery .col .gallery-tile .layer {
     width: 100%;
     height: 100%;
     cursor: pointer;
     background: none; }
-    .gallery-tile .layer i {
+    .gallery .col .gallery-tile .layer i {
       z-index: 100;
       padding: 10px;
       border-radius: 5px;
@@ -778,30 +748,24 @@ footer > div:last-child {
     vertical-align: middle;
     font-size: 30px; }
 
-  .gallery-tile .layer i {
-    z-index: 100;
-    padding: 10px;
-    border-radius: 5px;
-    transition: unset; }
-
-  .gallery-tile .layer {
+  .gallery .gallery-tile .layer {
     width: 100%;
     height: 100%;
     cursor: pointer;
     background: none; }
+    .gallery .gallery-tile .layer i {
+      z-index: 100;
+      padding: 10px;
+      border-radius: 5px;
+      transition: unset;
+      z-index: 100; }
+    .gallery .gallery-tile .layer .fa-camera-retro {
+      left: 15%; }
+    .gallery .gallery-tile .layer .fa-search {
+      right: 15%; }
 
-  .gallery-tile .layer i {
-    z-index: 100;
-    transition: unset; }
-
-  .fa-camera-retro {
-    left: 15%; }
-
-  .fa-search {
-    right: 15%; }
-
-  .portrait div.job,
-  .portrait:hover div.job {
+  .portrait .job,
+  .portrait:hover .job {
     background: none;
     cursor: unset;
     transition: unset;
@@ -813,19 +777,17 @@ footer > div:last-child {
     top: 50%;
     left: 50%;
     transform: unset; }
-
-  .job h4 {
-    z-index: 85;
-    position: static;
-    text-align: center;
-    top: 25%;
-    left: 25%;
-    color: #aaa;
-    font-size: 100%;
-    margin-bottom: 0; }
-
-  .staff div div h4 {
-    margin-top: 10px; }
+    .portrait .job h4,
+    .portrait:hover .job h4 {
+      z-index: 85;
+      position: static;
+      text-align: center;
+      top: 25%;
+      left: 25%;
+      color: #aaa;
+      font-size: 100%;
+      margin-bottom: 0;
+      margin-top: 10px; }
 
   .tablet-picture {
     word-break: normal;

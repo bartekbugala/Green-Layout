@@ -93,16 +93,27 @@ h3 {
 
 header {
     background-color: $color3;
+
     nav {
         min-height: 50px;
+        img {
+            padding: 10px 0
+        }
+
         ul {
             margin: 0;
             padding: 0;
             list-style-type: none;
             float: right;
             margin-right: 15%;
+
             li {
                 float: left;
+                &:hover {
+                    background-color: $color5;
+                    color: $color2;
+                }
+
                 a {
                     display: block;
                     font-size: 1em;
@@ -112,10 +123,14 @@ header {
                     text-decoration: none;
                     color: $color1;
                     text-transform: uppercase;
-                    transition: background-color .3s linear, color .3s linear
+                    transition: background-color .3s linear, color .3s linear;
+                    &:active {
+                        color: $color2;
+                    }
                 }
             }
         }
+
         .logo {
             float: left;
             width: 150px;
@@ -125,43 +140,27 @@ header {
     }
 }
 
-.blue,
-header>nav ul>li>a:active {
-    color: $color2;
-}
-
-header>nav ul>li:hover {
-    background-color: $color5;
-    color: $color2;
-}
-
-header>nav img {
-    padding: 10px 0
-}
-
 .hero {
     height: 380px;
     background-image: url(https://images.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg);
     background-position-y: 55%;
     background-repeat: no-repeat;
-    background-size: cover
-}
-
-.hero>div {
-    background-color: $color5-tr;
-    float: right;
-    max-width: 900px;
-    padding: 10px 24% 10px 10px;
-    position: relative;
-    top: 25%;
-    bottom: 25%;
-    height: 150px
-}
-
-.hero>div h1 {
-    font-weight: 400;
-    color: $color1;
-    text-align: left
+    background-size: cover;
+    div {
+        background-color: $color5-tr;
+        float: right;
+        max-width: 900px;
+        padding: 10px 24% 10px 10px;
+        position: relative;
+        top: 25%;
+        bottom: 25%;
+        height: 150px;
+        h1 {
+            font-weight: 400;
+            color: $color1;
+            text-align: left
+        }
+    }
 }
 
 .bold {
@@ -169,60 +168,53 @@ header>nav img {
 }
 
 .benefits {
-    min-height: 330px
-}
-
-.benefits>div {
-    padding-top: 50px;
-    width: 80%;
-    margin: 0 auto
-}
-
-.benefits i {
-    display: block;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 50px;
-    color: $color1;
-    background-color: $color3;
-    border-radius: 10px;
-    transition: background-color .3s linear
-}
-
-.benefits i:hover {
-    background-color: $color2;
-    cursor: pointer
-}
-
-.benefits h3 {
-    font-weight: 700;
-    margin-top: 25px;
-    margin-bottom: 4px;
-    font-size: 16px;
-    text-align: center;
-    padding: 0 15%;
-    color: $color3;
-    word-wrap: break-word
-}
-
-.benefits i:hover+h3,
-h3.blue-benefit {
-    color: $color2;
-    cursor: pointer
-}
-
-.benefits p {
-    line-height: 15px;
-    font-size: 14px;
-    margin-top: 0;
-    text-align: center;
-    padding: 0 15%;
-    color: $color4;
-    word-wrap: break-word
-}
+    min-height: 330px;
+    div {
+        padding-top: 50px;
+        width: 80%;
+        margin: 0 auto
+    }
+    i {
+        display: block;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 50px;
+        color: $color1;
+        background-color: $color3;
+        border-radius: 10px;
+        transition: background-color .3s linear;
+        &:hover {
+            background-color: $color2;
+            cursor: pointer
+        }
+        &:hover+h3 {
+            color: $color2;
+            cursor: pointer
+        }
+    }
+    h3 {
+        font-weight: 700;
+        margin-top: 25px;
+        margin-bottom: 4px;
+        font-size: 16px;
+        text-align: center;
+        padding: 0 15%;
+        color: $color3;
+        word-wrap: break-word
+    }
+    p {
+        line-height: 15px;
+        font-size: 14px;
+        margin-top: 0;
+        text-align: center;
+        padding: 0 15%;
+        color: $color4;
+        word-wrap: break-word
+    }
+} 
 
 .header-text {
     background-color: $color1;
@@ -251,70 +243,73 @@ h3.blue-benefit {
     word-wrap: break-word;
 }
 
-.gallery .col {
-    display: block;
-    line-height: 0
+.gallery {
+    .col {
+        display: block;
+        line-height: 0;
+
+        .gallery-tile {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 0;
+
+            .layer {
+                background-color: $color6-tr;
+                opacity: 1;
+                width: 100%;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: height .3s linear;
+
+                i {
+                    position: absolute;
+                    background-color: $color7;
+                    padding: .5vw;
+                    border-radius: .2vw;
+                    border: solid $color7 .2vw;
+                    color: $color0;
+                    top: 40%;
+                    overflow: hidden;
+                    transition: z-index .6s linear;
+                    z-index: -100
+                }
+                .fa-camera-retro {
+                    left: 20%
+                }
+                
+                .fa-search {
+                    right: 20%
+                }
+            }
+
+            &:hover .layer {
+                height: 100%;
+                cursor: pointer;
+
+                i {
+                    z-index: 100;
+                    transition: z-index .1s linear
+                }
+            }
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        padding: 0
+    }
 }
 
-.gallery img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    padding: 0
-}
 
-.gallery .col .gallery-tile {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 0
-}
-
-.gallery-tile .layer {
-    background-color: $color6-tr;
-    opacity: 1;
-    width: 100%;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: height .3s linear
-}
-
-.gallery-tile:hover .layer {
-    height: 100%;
-    cursor: pointer
-}
-
-.gallery-tile .layer i {
-    position: absolute;
-    background-color: $color7;
-    padding: .5vw;
-    border-radius: .2vw;
-    border: solid $color7 .2vw; 
-    color: $color0;
-    top: 40%;
-    overflow: hidden;
-    transition: z-index .6s linear;
-    z-index: -100
-}
-
-.gallery-tile:hover .layer i {
-    z-index: 100;
-    transition: z-index .1s linear
-}
-
-.fa-camera-retro {
-    left: 20%
-}
-
-.fa-search {
-    right: 20%
-}
 
 .staff img {
     width: 100%;
@@ -337,42 +332,37 @@ section.staff>div {
     margin: 0 auto;
     text-align: center;
     position: relative;
-    display: inline-block
-}
-
-.portrait div.job {
-    opacity: 0;
-    transition: opacity 1s linear
-}
-
-.portrait:hover div.job {
-    background-color: $color4;
-    background-color: $color6-tr;
-    opacity: 1;
-    width: 100%;
-    height: 98%;
-    border-radius: 50%;
-    position: absolute;
-    top: 49%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer
-}
-
-.job h4 {
-    z-index: 85;
-    position: absolute;
-    text-align: center;
-    top: 25%;
-    left: 25%;
-    color: $color7      ;
-    font-size: 100%
-}
-
-div.job {
-    background-color: $color1;
-    background-color: $color6-tr;
-    opacity: 0
+    display: inline-block;
+    .job {
+        background-color: $color1;
+        background-color: $color6-tr;
+        opacity: 0;
+        transition: opacity 1s linear;
+        h4 {
+            z-index: 85;
+            position: absolute;
+            text-align: center;
+            top: 25%;
+            left: 25%;
+            color: $color7;
+            font-size: 100%
+        }
+    }
+    &:hover {
+        .job {
+            background-color: $color4;
+            background-color: $color6-tr;
+            opacity: 1;
+            width: 100%;
+            height: 98%;
+            border-radius: 50%;
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer
+        }
+    } 
 }
 
 .tablet-picture {
@@ -407,8 +397,8 @@ div.job {
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: -220px;
-    
-    }
+
+}
 
 .tablet-picture h1 {
     padding: 10px;
@@ -425,11 +415,11 @@ div.job {
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 40px;
-    z-index: 200;   
+    z-index: 200;
 }
 
 .counters div div {
-    
+
     text-align: center;
     margin: 0 auto;
     padding: 0 10px;
@@ -478,10 +468,11 @@ footer .line2:after {
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    }
+}
+
 .social-icons .col {
     padding-left: 4px;
-    }
+}
 
 .social-icons i {
     font-size: 20px;
