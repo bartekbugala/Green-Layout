@@ -56,39 +56,40 @@
         padding: 0 8vw
     }
 
-    header {
-        nav{
-            .logo {
-                float: none;
-                display: block;
-                background: none;
-                width: 100%;
-                text-align: center;
-                max-width: 250px;
-                height: auto;
-                padding: 10px;
-                margin: 0 auto
-            }
-            ul {
-                float: none;
-                display: block;
-                background: none;
-                width: 100%;
-                text-align: center;
-                li {
-                    float: none;
-                    display: block;
-                    background: none;
-                    width: 100%;
-                    text-align: center;
-                    a {
-                        font-size: 30px;
-                        font-weight: 500;
-                        padding: 10px 0
-                    }
-                }
-            }
-        } 
+    
+
+    header{
+        nav ul>li {
+            float: none;
+            display: block;
+            background: none;
+            width: 100%;
+            text-align: center
+        }
+        nav .logo {
+            float: none;
+            display: block;
+            background: none;
+            width: 100%;
+            text-align: center;
+            max-width: 250px;
+            height: auto;
+            padding: 10px;
+            margin: 0 auto
+        }
+        nav ul {
+            float: none;
+            display: block;
+            background: none;
+            width: 100%;
+            text-align: center
+        }
+        nav ul li a {
+            font-size: 30px;
+            font-weight: 500;
+            padding: 10px 0
+        }
+
     }
 
     .hero>div {
@@ -98,23 +99,25 @@
 
     .benefits {
         margin-top: 0;
-        padding: 0;
-        >div {
-            width: 100%
-        }
-        i {
-            margin-top: 10px;
-            line-height: 120px;
-            width: 120px;
-            height: 120px;
-            vertical-align: middle;
-            font-size: 80px;
-        }
+        padding: 0
     }
-    
+
+    .benefits>div {
+        width: 100%
+    }
+
+    .benefits i {
+        margin-top: 10px;
+        line-height: 120px;
+        width: 120px;
+        height: 120px;
+        vertical-align: middle;
+        font-size: 80px;
+    }
+
     .benefits h3,
     .header-text h1 {
-        color: $color3;
+        color: #313332;
         width: 100%;
         font-size: 20px;
         padding: 0 8vw
@@ -124,7 +127,7 @@
     .header-text p {
         width: 100%;
         padding: 0 8vw;
-        color: $color4;
+        color: #aaa;
         text-align: justify;
         word-break: normal;
     }
@@ -186,7 +189,7 @@
         text-align: center;
         top: 25%;
         left: 25%;
-        color: $color4;
+        color: #aaa;
         font-size: 100%;
         margin-bottom: 0;
     }
@@ -194,19 +197,18 @@
     .staff div div h4 {
         margin-top: 10px;
     }
-
-    .tablet-picture>div {
+    
+    .tablet-picture > div {
         width: 100%;
         padding: 20px 5px;
     }
-
+    
     .tablet-picture img {
         width: 50vw;
         max-width: 50vw;
         padding: 20px 10px 0 10px;
         margin-bottom: 0;
     }
-
     .tablet-picture h1 {
         padding: 0 8vw;
     }
