@@ -389,7 +389,6 @@ div.job {
 
 .tablet-picture>div>div {
     display: block;
-    vertical-align: bottom;
     overflow: visible;
     z-index: 2
 }
