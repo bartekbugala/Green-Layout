@@ -1,5 +1,4 @@
-# Green-Layout
-Simple RWD Layout made using Sass arround 2019
+## Simple RWD Layout made using Sass arround 2019
 
 RWD Layout - HTML5, Sass
 
